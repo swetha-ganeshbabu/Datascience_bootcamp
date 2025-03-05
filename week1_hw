@@ -1,0 +1,72 @@
+# 1. Display Fibonacci Series up to 10 terms
+def fibonacci_series(n):
+    f = [0, 1]
+    for i in range(n - 2):
+        f.append(f[-1] + f[-2])
+    return f
+
+print("Fibonacci Series upto 10 terms: ", fibonacci_series(10))
+
+
+# 2. Display numbers at the odd indices of a list
+def odd_indices(l):
+    result = []
+    for i in range(len(l)):  
+        if i % 2 != 0: 
+            result.append(l[i])  
+    return result
+
+l = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+print("Numbers at odd indices:", odd_indices(l))
+
+
+# 3. Count the number of different words in a given text
+text = """
+I have provided this text to provide tips on creating interesting paragraphs.
+First, start with a clear topic sentence that introduces the main idea.
+Then, support the topic sentence with specific details, examples, and evidence.
+Vary the sentence length and structure to keep the reader engaged.
+Finally, end with a strong concluding sentence that summarizes the main points.
+Remember, practice makes perfect!
+"""
+
+def word_count(text):
+    words = text.lower().replace(",", "").replace(".", "").split()
+    return len(set(words))
+
+print("Number of different words:", word_count(text))
+
+
+# 4. Function to count the number of vowels in a word
+def count_vowels(word):
+    vowels = "aeiouAEIOU"
+    count = 0  
+    for i in word:  
+        if i in vowels:  
+            count += 1  
+    return count  
+
+print("Number of vowels in 'Institution':", count_vowels("Institution"))
+
+
+# 5. Print each animal in all caps
+animals = ['tiger', 'elephant', 'monkey', 'zebra', 'panther']
+print("Animals in all caps:")
+for i in animals:
+    print(i.upper())
+
+
+# 6. Iterate through numbers 1 to 20 and print if they are odd or even
+print("Odd and Even numbers from 1 to 20:")
+for i in range(1, 21):
+    if i % 2 == 0:
+        print(f"{i} is even")
+    else:
+        print(f"{i} is odd")
+
+# 7. Function to sum two integers entered by the user
+def sum(a, b):
+    return a + b
+a = int(input("Enter first integer: "))
+b = int(input("Enter second integer: "))
+print("Sum of two integers:", sum(a,b))
